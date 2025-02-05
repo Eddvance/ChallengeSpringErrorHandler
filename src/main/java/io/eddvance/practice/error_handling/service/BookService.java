@@ -7,21 +7,21 @@ import org.springframework.stereotype.Service;
 @Service
 public class BookService implements BookServiceInterface {
 
-    private final BookRepositoryInterface errorHandlingRepository;
-    public BookService(BookRepositoryInterface errorHandlingRepository) {this.errorHandlingRepository = errorHandlingRepository;}
+    private final BookRepositoryInterface bookRepositoryInterface;
+    public BookService(BookRepositoryInterface bookRepositoryInterface) {this.bookRepositoryInterface = bookRepositoryInterface;}
 
     @Override
     public Book createBook(Book book) {
-        return errorHandlingRepository.save(book);
+        return bookRepositoryInterface.save(book);
     }
 
     @Override
     public Iterable<Book> getBookList() {
-        return errorHandlingRepository.findAll();
+        return bookRepositoryInterface.findAll();
     }
 
     @Override
     public Book getBookByNumber(Long number) {
-        return errorHandlingRepository.findById(number).orElse(null);
+        return bookRepositoryInterface.findById(number).orElse(null);
     }
 }
