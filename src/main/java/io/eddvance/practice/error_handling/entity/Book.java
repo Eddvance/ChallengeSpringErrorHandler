@@ -2,6 +2,9 @@ package io.eddvance.practice.error_handling.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Book {
 
@@ -13,6 +16,7 @@ public class Book {
     private String name;
     @Column(name = "BOOK_AUTHOR")
     private final String author = "Edouard Leroy";
+
 
     public Long getNumber() {
         return number;
