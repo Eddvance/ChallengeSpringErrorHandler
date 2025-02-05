@@ -2,9 +2,6 @@ package io.eddvance.practice.error_handling.entity;
 
 import jakarta.persistence.*;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 public class Book {
 
@@ -12,11 +9,22 @@ public class Book {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "BOOK_NUMBER", columnDefinition = "BIGINT")
     private Long number;
+
     @Column(name = "BOOK_NAME")
     private String name;
-    @Column(name = "BOOK_AUTHOR")
-    private final String author = "Edouard Leroy";
 
+    @Column(name = "BOOK_AUTHOR", updatable = false)
+    private String author = "Edouard Leroy";
+
+    //private Chapter chapter;
+    //private Line line;
+
+    public Book() {
+    }
+
+    public Book(String author) {
+        this.author = author;
+    }
 
     public Long getNumber() {
         return number;
@@ -38,16 +46,9 @@ public class Book {
         return author;
     }
 
-    public Book() {
-    }
-
-    public Book(Long number, String name, String author) {
+    public Book(Long number, String name) {
         this.number = number;
         this.name = name;
     }
-
-
-    //private Chapter chapter;
-    //private Line line;
 
 }
