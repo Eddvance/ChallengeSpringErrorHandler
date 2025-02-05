@@ -1,4 +1,4 @@
-package io.eddvance.practice.error_handling.core.entity;
+package io.eddvance.practice.error_handling.entity;
 
 import jakarta.persistence.*;
 
