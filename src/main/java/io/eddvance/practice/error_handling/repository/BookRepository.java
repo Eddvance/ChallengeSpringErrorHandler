@@ -10,9 +10,9 @@ import java.util.Optional;
 import java.util.logging.Logger;
 
 @Repository
-public class ErrorHandlingRepository implements CrudRepository<Book, Long> {
+public class BookRepository implements CrudRepository<Book, Long> {
 
-private Logger logger = Logger.getLogger(ErrorHandlingRepository.class.getName());
+private Logger logger = Logger.getLogger(BookRepository.class.getName());
 private static List<Book> books = new ArrayList<>();
 
     @Override
