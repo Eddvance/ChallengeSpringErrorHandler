@@ -53,5 +53,4 @@ public class Book {
         this.number = number;
         this.name = name;
     }
-
 }
