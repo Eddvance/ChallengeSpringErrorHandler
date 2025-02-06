@@ -5,7 +5,7 @@ import io.eddvance.practice.error_handling.service.BookServiceInterface;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/book")
 public class BookResource {
 
     private BookServiceInterface bookService;

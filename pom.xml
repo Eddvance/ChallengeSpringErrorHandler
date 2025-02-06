@@ -35,6 +35,12 @@
             <version>3.3.4</version>
         </dependency>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+            <version>8.0.33</version>
+        </dependency>
+        <dependency>
             <groupId>jakarta.persistence</groupId>
             <artifactId>jakarta.persistence-api</artifactId>
             <version>3.2.0</version>
@@ -51,5 +57,14 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
+    <build>
+        <pluginManagement> <!-- https://youtrack.jetbrains.com/issue/IDEA-265664/maven-spring-boot-maven-plugin-is-highlighted-in-red-if-version-is-specified-in-paren-pom -->
+            <plugins>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 </project>
