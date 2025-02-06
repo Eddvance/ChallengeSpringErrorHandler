@@ -1,0 +1,62 @@
+body {
+    /* Un dégradé plus doux avec des teintes pastel */
+    background: linear-gradient(135deg, #a8dadc, #457b9d);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333; /* Texte foncé pour une bonne lisibilité */
+}
+
+.container {
+    background: #ffffff;  /* Fond blanc pour contraster agréablement avec le dégradé */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #457b9d; /* Utilisation d'une teinte plus sombre et harmonieuse pour le titre */
+}
+
+form p {
+    margin: 15px 0;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input[type="submit"] {
+    background-color: #457b9d;
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover {
+    background-color: #1d3557;
+}
+
+.error {
+    color: #e63946;
+    font-size: 0.9em;
+    margin-top: 5px;
+}

@@ -1,6 +1,5 @@
 package io.eddvance.practice.error_handling.api;
 
-
 import io.eddvance.practice.error_handling.entity.Book;
 import io.eddvance.practice.error_handling.service.BookServiceInterface;
 import org.springframework.web.bind.annotation.*;

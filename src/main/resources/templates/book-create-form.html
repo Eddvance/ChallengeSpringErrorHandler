@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>RFC Consult - Add a Book</title>
+  <link rel="stylesheet" th:href="@{/css/create-style.css}" />
+</head>
+<body>
+<div class="container">
+  <h2>Ajouter un livre</h2>
+  <form method="POST" th:action="@{/book/create}" th:object="${bookForm}">
+    <p>
+      Customer name<br/>
+      <input th:field="*{name}" type="text" placeholder="Entrez le nom du client"/>
+    </p>
+    <div th:errors="*{name}" th:if="${#fields.hasErrors('name')}" class="error"></div>
+    <p>
+      Publication year<br/>
+      <input th:field="*{publicationYear}" type="text" placeholder="Entrez l'année de publication"/>
+    </p>
+    <div th:errors="*{publicationYear}" th:if="${#fields.hasErrors('publicationYear')}" class="error"></div>
+    <input type="submit" value="Ajouter"/>
+  </form>
+</div>
+</body>
+</html>

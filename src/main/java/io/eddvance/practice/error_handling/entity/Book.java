@@ -13,6 +13,9 @@ public class Book {
     @Column(name = "BOOK_NAME")
     private String name;
 
+    @Column(name = "PUBLICATION_YEAR")
+    private Long publicationYear;
+
     @Column(name = "BOOK_AUTHOR", updatable = false)
     private String author = "Edouard Leroy";
 
