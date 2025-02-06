@@ -23,8 +23,8 @@ public class BookResource {
         return bookService.getBookList();
     }
 
-    @GetMapping("{/id}")
-    public Book getBookByNumber(@PathVariable Long number) {
-        return bookService.getBookByNumber(number);
+    @GetMapping("/{id}")
+    public Book getBookByNumber(@PathVariable Long id) {
+        return bookService.getBookByNumber(id);
     }
 }

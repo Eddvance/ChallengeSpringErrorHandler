@@ -6,7 +6,6 @@ import jakarta.persistence.*;
 public class Book {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "BOOK_NUMBER", columnDefinition = "BIGINT")
     private Long number;
 
@@ -17,7 +16,7 @@ public class Book {
     private Long publicationYear;
 
     @Column(name = "BOOK_AUTHOR", updatable = false)
-    private String author = "Edouard Leroy";
+    private String author;
 
     //private Chapter chapter;
     //private Line line;

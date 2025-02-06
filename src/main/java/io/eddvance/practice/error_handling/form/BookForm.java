@@ -6,7 +6,6 @@ import jakarta.validation.constraints.Size;
 public class BookForm {
 
     private Long number;
-
     @NotBlank
     private String name;
 
