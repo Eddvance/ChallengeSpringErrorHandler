@@ -6,4 +6,5 @@ public interface BookServiceInterface {
     Book createBook(Book book);
     Iterable<Book> getBookList();
     Book getBookByNumber(Long number);
+    void deleteBook(Long id);
 }

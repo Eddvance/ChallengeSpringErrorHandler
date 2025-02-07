@@ -1,31 +1,43 @@
 /* home-style.css */
 
-/* Fond de page en gris moderne */
+/* Fond de page en dégradé bleu moderne */
 body {
-    background: linear-gradient(135deg, #a8dadc, #457b9d);
+    background: linear-gradient(135deg, #002D72, #00509E); /* Bleu foncé à bleu moyen */
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
+    margin: 0;
+    padding: 0;
+    color: #ffffff; /* Texte en blanc pour le contraste */
+}
+
+/* Conteneur central (optionnel) */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
 /* Style du titre */
 h1 {
-    color: #2c3e50;
+    color: #ffffff;
+    margin-top: 20px;
 }
 
-/* Style de base pour les boutons (liens) */
-a.button {
+/* Style commun pour les boutons */
+a.button, button.button {
     display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007BFF; /* Bleu vif */
-    color: #fff;
+    margin: 20px 10px;
+    padding: 12px 24px;
+    background-color: #3399FF; /* Bleu plus clair pour les boutons */
+    color: #ffffff;
     text-decoration: none;
+    border: none;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Changement de couleur au survol */
-a.button:hover {
-    background-color: #0056b3;
+/* Effet hover pour les boutons */
+a.button:hover, button.button:hover {
+    background-color: #66B2FF;
 }
