@@ -30,7 +30,6 @@ public class BookResource {
         return bookService.getBookByNumber(id);
     }
 
-
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
         bookService.deleteBook(id);
