@@ -12,6 +12,14 @@ public class Book {
     @Column(name = "BOOK_NAME")
     private String name;
 
+    public Long getPublicationYear() {
+        return publicationYear;
+    }
+
+    public void setPublicationYear(Long publicationYear) {
+        this.publicationYear = publicationYear;
+    }
+
     @Column(name = "PUBLICATION_YEAR")
     private Long publicationYear;
 

@@ -8,10 +8,10 @@
 <body>
 <div class="container">
   <h2>Ajouter un livre</h2>
-  <form method="POST" th:action="@{/book/create}" th:object="${bookForm}">
+  <form method="POST" th:action="@{/create}" th:object="${bookForm}">
     <p>
-      Customer name<br/>
-      <input th:field="*{name}" type="text" placeholder="Entrez le nom du client"/>
+      book name<br/>
+      <input th:field="*{name}" type="text" placeholder="Entrez le nom du livre"/>
     </p>
     <div th:errors="*{name}" th:if="${#fields.hasErrors('name')}" class="error"></div>
     <p>

@@ -10,7 +10,9 @@
 <p>
     This database contains information on various RFCs. Explore, search, and find details about each RFC document.
 </p>
-<!-- Lien vers le formulaire de création -->
-<a href="book-create-form.html">Add a New Book</a>
+
+<a th:href="@{/book/create-form}" class="button">Add a New Book</a>
+
+<a th:href="@{/book/home}" class="button">Consult Books</a>
 </body>
 </html>
