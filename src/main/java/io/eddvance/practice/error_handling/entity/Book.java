@@ -8,24 +8,16 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "BOOK_NUMBER", columnDefinition = "BIGINT")
-    private Long BookNumber;
+    private Long bookNumber;
 
     @Column(name = "BOOK_NAME")
-    private String name;
+    private String bookName;
 
-    public Long getPublicationYear() {
-        return publicationYear;
-    }
-
-    public void setPublicationYear(Long publicationYear) {
-        this.publicationYear = publicationYear;
-    }
-
-    @Column(name = "PUBLICATION_YEAR")
-    private Long publicationYear;
+    @Column(name = "BOOK_PUBLICATION_YEAR")
+    private Long bookPublicationYear;
 
     @Column(name = "BOOK_AUTHOR", updatable = false)
-    private String author = "Eddvance";
+    private String bookAuthor = "Eddvance";
 
     //private Chapter chapter;
     //private Line line;
@@ -33,35 +25,42 @@ public class Book {
     public Book() {
     }
 
-   /* public Book(Long bookNumber, String name, Long publicationYear, String author) {
-        BookNumber = bookNumber;
-        this.name = name;
-        this.publicationYear = publicationYear;
-        this.author = author;
+    public Book(Long bookNumber, String bookName, Long bookPublicationYear, String bookAuthor) {
+        this.bookNumber = bookNumber;
+        this.bookName = bookName;
+        this.bookPublicationYear = bookPublicationYear;
+        this.bookAuthor = bookAuthor;
     }
-*/
-    public Book(String author) {
-        this.author = author;
+
+    public Long bookPublicationYear() {
+        return bookPublicationYear;
+    }
+
+    public void setBookPublicationYear(Long bookPublicationYear) {
+        this.bookPublicationYear = bookPublicationYear;
+    }
+
+    public Book(String bookAuthor) {
+        this.bookAuthor = bookAuthor;
     }
 
     public Long getBookNumber() {
-        return BookNumber;
+        return bookNumber;
     }
 
-    public void setBookNumber(Long number) {
-        this.BookNumber = number;
+    public void setBookNumber(Long bookNumber) {
+        this.bookNumber = bookNumber;
     }
 
-    public String getName() {
-        return name;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getBookAuthor() {
+        return bookAuthor;
     }
-
 }

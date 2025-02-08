@@ -63,7 +63,7 @@
         </dependency>
     </dependencies>
     <build>
-        <pluginManagement> <!-- https://youtrack.jetbrains.com/issue/IDEA-265664/maven-spring-boot-maven-plugin-is-highlighted-in-red-if-version-is-specified-in-paren-pom -->
+        <pluginManagement>
             <plugins>
                 <plugin>
                     <groupId>org.springframework.boot</groupId>

@@ -5,41 +5,41 @@ import jakarta.validation.constraints.Size;
 
 public class BookForm {
 
-    private Long number;
+    private Long bookNumber;
     @NotBlank
-    private String name;
+    private String bookName;
 
     @NotBlank
     @Size(min = 4, max = 4)
-    private Long publicationYear;
+    private Long bookPublicationYear;
 
-    private String author;
+    private String bookAuthor;
 
-    public Long getNumber() {
-        return number;
+    public Long getBookNumber() {
+        return bookNumber;
     }
 
-    public void setNumber(Long number) {
-        this.number = number;
+    public void setBookNumber(Long bookNumber) {
+        this.bookNumber = bookNumber;
     }
 
-    public String getName() {
-        return name;
+    public String getBookName() {
+        return bookName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setBookName(String bookName) {
+        this.bookName = bookName;
     }
 
-    public Long getPublicationYear() {
-        return publicationYear;
+    public Long getBookPublicationYear() {
+        return bookPublicationYear;
     }
 
-    public void setPublicationYear(Long publicationYear) {
-        this.publicationYear = publicationYear;
+    public void setBookPublicationYear(Long bookPublicationYear) {
+        this.bookPublicationYear = bookPublicationYear;
     }
 
-    public String getAuthor() {
-        return author;
+    public String getBookAuthor() {
+        return bookAuthor;
     }
 }

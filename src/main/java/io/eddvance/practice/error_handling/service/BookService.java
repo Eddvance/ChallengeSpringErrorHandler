@@ -5,6 +5,8 @@ import io.eddvance.practice.error_handling.exceptions.BookNotFoundException;
 import io.eddvance.practice.error_handling.repository.BookRepositoryInterface;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
@@ -37,5 +39,10 @@ public class BookService implements BookServiceInterface {
             throw new BookNotFoundException("Book not found with id " + id);
         }
         bookRepositoryInterface.deleteById(id);
+    }
+
+    @Override
+    public void deleteAllBooks(List<Long> ids) {
+        bookRepositoryInterface.deleteAll();
     }
 }

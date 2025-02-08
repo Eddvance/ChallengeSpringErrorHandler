@@ -5,6 +5,8 @@ import io.eddvance.practice.error_handling.service.BookServiceInterface;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/book")
 public class BookResource {
@@ -31,8 +33,14 @@ public class BookResource {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteBook(@PathVariable Long id) {
-        bookService.deleteBook(id);
+    public ResponseEntity<Void> deleteBook(@PathVariable Long number) {
+        bookService.deleteBook(number);
+        return ResponseEntity.noContent().build();
+    }
+
+    @DeleteMapping("/bulk-delete")
+    public ResponseEntity<Void> deleteBooks(@RequestBody List<Long> ids) {
+        bookService.deleteAllBooks(ids);
         return ResponseEntity.noContent().build();
     }
 }

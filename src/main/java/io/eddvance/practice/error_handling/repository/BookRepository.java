@@ -74,6 +74,5 @@ private static List<Book> books = new ArrayList<>();
 
     @Override
     public void deleteAll() {
-
     }
 }
