@@ -33,12 +33,12 @@ public class BookResource {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteBook(@PathVariable Long number) {
+    public ResponseEntity<Void> deleteBook(@PathVariable("id") Long number) {
         bookService.deleteBook(number);
         return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping("/bulk-delete")
+    @PostMapping("/bulk-delete")
     public ResponseEntity<Void> deleteBooks(@RequestBody List<Long> ids) {
         bookService.deleteAllBooks(ids);
         return ResponseEntity.noContent().build();

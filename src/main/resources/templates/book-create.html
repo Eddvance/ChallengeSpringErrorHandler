@@ -19,7 +19,7 @@
       Publication Year<br/>
       <input th:field="*{bookPublicationYear}" type="text" placeholder="Enter year of publication"/>
     </p>
-    <div th:if="${#fields.hasErrors('BookPublicationYear')}" th:errors="*{bookPublicationYear}" class="error"></div>
+    <div th:if="${#fields.hasErrors('bookPublicationYear')}" th:errors="*{bookPublicationYear}" class="error"></div>
 
     <p>
       Book Author<br/>

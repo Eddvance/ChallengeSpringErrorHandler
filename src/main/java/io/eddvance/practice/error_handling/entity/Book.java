@@ -32,7 +32,7 @@ public class Book {
         this.bookAuthor = bookAuthor;
     }
 
-    public Long bookPublicationYear() {
+    public Long getBookPublicationYear() {
         return bookPublicationYear;
     }
 
