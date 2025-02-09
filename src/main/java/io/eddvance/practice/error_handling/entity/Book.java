@@ -16,20 +16,29 @@ public class Book {
     @Column(name = "BOOK_PUBLICATION_YEAR")
     private Long bookPublicationYear;
 
+    @Column(name = "BOOK_DESCRIPTION", length = 5000)
+    private String bookDescription;
+
     @Column(name = "BOOK_AUTHOR", updatable = false)
     private String bookAuthor = "Eddvance";
-
-    //private Chapter chapter;
-    //private Line line;
 
     public Book() {
     }
 
-    public Book(Long bookNumber, String bookName, Long bookPublicationYear, String bookAuthor) {
+    public Book(Long bookNumber, String bookName, Long bookPublicationYear, String bookDescription, String bookAuthor) {
         this.bookNumber = bookNumber;
         this.bookName = bookName;
         this.bookPublicationYear = bookPublicationYear;
+        this.bookDescription = bookDescription;
         this.bookAuthor = bookAuthor;
+    }
+
+    public String getBookDescription() {
+        return bookDescription;
+    }
+
+    public void setBookDescription(String bookDescription) {
+        this.bookDescription = bookDescription;
     }
 
     public Long getBookPublicationYear() {

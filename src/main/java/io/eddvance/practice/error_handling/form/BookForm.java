@@ -13,7 +13,18 @@ public class BookForm {
     @Size(min = 4, max = 4)
     private Long bookPublicationYear;
 
+    @NotBlank
+    private String bookDescription;
+
     private String bookAuthor;
+
+    public String getBookDescription() {
+        return bookDescription;
+    }
+
+    public void setBookDescription(String bookDescription) {
+        this.bookDescription = bookDescription;
+    }
 
     public Long getBookNumber() {
         return bookNumber;

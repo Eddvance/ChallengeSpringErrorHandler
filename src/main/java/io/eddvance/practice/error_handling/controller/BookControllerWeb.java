@@ -30,8 +30,9 @@ public class BookControllerWeb {
     }
 
     @PostMapping("/create")
-    public String createBook(@ModelAttribute("bookForm") Book book) {
-        bookService.createBook(book);
-        return "redirect:/home";
+    public String createBook(@ModelAttribute("bookForm") Book book, Model model) {
+        Book createdBook = bookService.createBook(book);
+        model.addAttribute("book", createdBook);
+        return "book-created";
     }
 }

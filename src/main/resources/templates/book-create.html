@@ -27,7 +27,14 @@
     </p>
     <div th:if="${#fields.hasErrors('bookAuthor')}" th:errors="*{bookAuthor}" class="error"></div>
 
+    <p>
+      Description<br/>
+      <textarea th:field="*{bookDescription}" placeholder="Enter book description"></textarea>
+    </p>
+    <div th:if="${#fields.hasErrors('bookDescription')}" th:errors="*{bookDescription}" class="error"></div>
+
     <input type="submit" value="Add Book"/>
+    <a th:href="@{/home}" class="button">cancel & home</a>
   </form>
 </div>
 </body>

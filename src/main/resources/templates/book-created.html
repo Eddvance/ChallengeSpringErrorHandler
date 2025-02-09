@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Book Created</title>
+    <link rel="stylesheet" th:href="@{/css/create-style.css}" />
 </head>
 <body>
-
+<div class="container">
+    <h1>Book Created Successfully</h1>
+    <p>The following book has been created:</p>
+    <ul>
+        <li><strong>ID:</strong> <span th:text="${book.bookNumber}">Book Number</span></li>
+        <li><strong>Name:</strong> <span th:text="${book.bookName}">Book Name</span></li>
+        <li><strong>Publication Year:</strong> <span th:text="${book.bookPublicationYear}">Year</span></li>
+        <li><strong>Author:</strong> <span th:text="${book.bookAuthor}">Author</span></li>
+        <li><strong>Description:</strong> <span th:text="${book.bookDescription}">Description</span></li>
+    </ul>
+    <div class="buttons">
+        <a th:href="@{/home}" class="button">Back to Home</a>
+        <a th:href="@{/book-create}" class="button">Create Another Book</a>
+    </div>
+</div>
 </body>
 </html>

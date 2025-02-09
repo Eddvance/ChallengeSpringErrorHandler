@@ -1,62 +1,66 @@
 body {
-    /* Un dégradé plus doux avec des teintes pastel */
-    background: linear-gradient(135deg, #a8dadc, #457b9d);
+    background: linear-gradient(135deg, #3a3a3a, #2a2a2a);
     font-family: Arial, sans-serif;
+    color: #ffffff;
     margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    color: #333; /* Texte foncé pour une bonne lisibilité */
+    padding: 20px;
+    text-align: center;
 }
 
 .container {
-    background: #ffffff;  /* Fond blanc pour contraster agréablement avec le dégradé */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #444;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 h2 {
     margin-bottom: 20px;
-    color: #457b9d; /* Utilisation d'une teinte plus sombre et harmonieuse pour le titre */
 }
 
 form p {
-    margin: 15px 0;
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-input[type="text"] {
-    width: 80%;
+input[type="text"],
+textarea {
+    width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-input[type="submit"] {
-    background-color: #457b9d;
-    color: #fff;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 5px;
     font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
 }
 
-input[type="submit"]:hover {
-    background-color: #1d3557;
+textarea {
+    min-height: 150px;
 }
 
 .error {
-    color: #e63946;
-    font-size: 0.9em;
+    color: #ff5555;
+    font-size: 14px;
     margin-top: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #3399FF;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #66B2FF;
 }
