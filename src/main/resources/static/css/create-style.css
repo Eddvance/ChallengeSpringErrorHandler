@@ -62,5 +62,12 @@ textarea {
 }
 
 .button:hover {
-    background-color: #66B2FF;
+    background-color: #3399FF;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }

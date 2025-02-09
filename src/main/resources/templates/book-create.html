@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>RFC Consult - Add a Book</title>
+  <title>Book Create</title>
   <link rel="stylesheet" th:href="@{/css/create-style.css}" />
 </head>
 <body>
@@ -33,7 +33,9 @@
     </p>
     <div th:if="${#fields.hasErrors('bookDescription')}" th:errors="*{bookDescription}" class="error"></div>
 
-    <input type="submit" value="Add Book"/>
+
+
+    <input type="submit" value="Add Book" class="button"/>
     <a th:href="@{/home}" class="button">cancel & home</a>
   </form>
 </div>
