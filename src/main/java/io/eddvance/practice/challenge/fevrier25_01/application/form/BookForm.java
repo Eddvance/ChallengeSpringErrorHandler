@@ -1,4 +1,4 @@
-package io.eddvance.practice.error_handling.form;
+package io.eddvance.practice.challenge.fevrier25_01.application.form;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;

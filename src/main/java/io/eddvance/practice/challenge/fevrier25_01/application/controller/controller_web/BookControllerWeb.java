@@ -1,10 +1,9 @@
-package io.eddvance.practice.error_handling.controller;
+package io.eddvance.practice.challenge.fevrier25_01.application.controller.controller_web;
 
-import io.eddvance.practice.error_handling.entity.Book;
-import io.eddvance.practice.error_handling.service.BookServiceInterface;
+import io.eddvance.practice.challenge.fevrier25_01.application.model.entity.Book;
+import io.eddvance.practice.challenge.fevrier25_01.application.service.BookServiceInterface;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;

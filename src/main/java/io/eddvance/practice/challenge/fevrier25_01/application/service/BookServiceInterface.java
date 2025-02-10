@@ -1,6 +1,6 @@
-package io.eddvance.practice.error_handling.service;
+package io.eddvance.practice.challenge.fevrier25_01.application.service;
 
-import io.eddvance.practice.error_handling.entity.Book;
+import io.eddvance.practice.challenge.fevrier25_01.application.model.entity.Book;
 
 import java.util.List;
 

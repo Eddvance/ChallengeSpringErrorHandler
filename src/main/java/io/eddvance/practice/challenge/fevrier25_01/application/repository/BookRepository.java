@@ -1,6 +1,6 @@
-package io.eddvance.practice.error_handling.repository;
+package io.eddvance.practice.challenge.fevrier25_01.application.repository;
 
-import io.eddvance.practice.error_handling.entity.Book;
+import io.eddvance.practice.challenge.fevrier25_01.application.model.entity.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

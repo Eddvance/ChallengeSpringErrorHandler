@@ -1,8 +1,8 @@
-package io.eddvance.practice.error_handling.service;
+package io.eddvance.practice.challenge.fevrier25_01.application.service;
 
-import io.eddvance.practice.error_handling.entity.Book;
-import io.eddvance.practice.error_handling.exceptions.BookNotFoundException;
-import io.eddvance.practice.error_handling.repository.BookRepositoryInterface;
+import io.eddvance.practice.challenge.fevrier25_01.application.model.entity.Book;
+import io.eddvance.practice.challenge.fevrier25_01.application.exception.BookNotFoundException;
+import io.eddvance.practice.challenge.fevrier25_01.application.repository.BookRepositoryInterface;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

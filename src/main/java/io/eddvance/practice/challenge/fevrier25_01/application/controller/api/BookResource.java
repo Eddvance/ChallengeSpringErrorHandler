@@ -1,7 +1,7 @@
-package io.eddvance.practice.error_handling.api;
+package io.eddvance.practice.challenge.fevrier25_01.application.controller.api;
 
-import io.eddvance.practice.error_handling.entity.Book;
-import io.eddvance.practice.error_handling.service.BookServiceInterface;
+import io.eddvance.practice.challenge.fevrier25_01.application.model.entity.Book;
+import io.eddvance.practice.challenge.fevrier25_01.application.service.BookServiceInterface;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

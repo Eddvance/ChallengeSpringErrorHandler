@@ -32,14 +32,16 @@
             .then(data => {
                 const container = document.getElementById("bookListContainer");
                 container.innerHTML = "";
+
                 if (!data || data.length === 0) {
                     container.innerHTML = "<p>No books found.</p>";
                 } else {
                     const table = document.createElement("table");
 
+                    // En-têtes du tableau (inclure la Description)
                     const thead = document.createElement("thead");
                     const headerRow = document.createElement("tr");
-                    const headers = ["Select", "ID", "Name", "Publication Year", "Author", "Action"];
+                    const headers = ["Select", "ID", "Name", "Publication Year", "Author", "Description", "Action"];
                     headers.forEach(headerText => {
                         const th = document.createElement("th");
                         th.textContent = headerText;
@@ -48,10 +50,12 @@
                     thead.appendChild(headerRow);
                     table.appendChild(thead);
 
+                    // Corps du tableau
                     const tbody = document.createElement("tbody");
                     data.forEach(book => {
                         const row = document.createElement("tr");
 
+                        // Checkbox de sélection
                         const selectCell = document.createElement("td");
                         const checkbox = document.createElement("input");
                         checkbox.type = "checkbox";
@@ -60,22 +64,32 @@
                         selectCell.appendChild(checkbox);
                         row.appendChild(selectCell);
 
+                        // ID
                         const idCell = document.createElement("td");
                         idCell.textContent = book.bookNumber;
                         row.appendChild(idCell);
 
+                        // Nom du livre
                         const nameCell = document.createElement("td");
                         nameCell.textContent = book.bookName;
                         row.appendChild(nameCell);
 
+                        // Année de publication
                         const yearCell = document.createElement("td");
-                        yearCell.textContent = book.publicationYear;
+                        yearCell.textContent = book.bookPublicationYear;
                         row.appendChild(yearCell);
 
+                        // Auteur
                         const authorCell = document.createElement("td");
                         authorCell.textContent = book.bookAuthor;
                         row.appendChild(authorCell);
 
+                        // Description (nouvelle colonne)
+                        const descCell = document.createElement("td");
+                        descCell.textContent = book.bookDescription; // Assurez-vous que 'bookDescription' existe côté serveur
+                        row.appendChild(descCell);
+
+                        // Action (bouton Delete)
                         const actionCell = document.createElement("td");
                         const deleteButton = document.createElement("button");
                         deleteButton.textContent = "Delete";
@@ -102,6 +116,7 @@
 
                         tbody.appendChild(row);
                     });
+
                     table.appendChild(tbody);
                     container.appendChild(table);
                 }
