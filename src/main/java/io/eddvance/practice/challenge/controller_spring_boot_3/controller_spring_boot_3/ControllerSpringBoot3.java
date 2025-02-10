@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/spring-boot-3")
 @RestController
 public class ControllerSpringBoot3 {
-///api/sb3/test-error
+
     @GetMapping("/error-page-spring-boot-3")
     public String errorPage() {
         throw new MyGlobalException("An error has occurred (with spring boot 3");
