@@ -1,4 +1,4 @@
-package io.eddvance.practice.challenge.controller_spring_boot_2.controller_spring_boot_2;
+package io.eddvance.practice.challenge.controller_spring_boot_2;
 
 public class GenMessageErrorSpringBoot2 {
 

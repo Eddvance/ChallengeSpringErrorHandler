@@ -1,6 +1,6 @@
-package io.eddvance.practice.challenge.controller_spring_boot_3.controller_spring_boot_3;
+package io.eddvance.practice.challenge.controller_spring_boot_3;
 
-import io.eddvance.practice.challenge.error_handler_exception.error_handler_exception.MyGlobalException;
+import io.eddvance.practice.challenge.error_handler_exception.MyGlobalException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ProblemDetail;
 import org.springframework.web.bind.annotation.ExceptionHandler;

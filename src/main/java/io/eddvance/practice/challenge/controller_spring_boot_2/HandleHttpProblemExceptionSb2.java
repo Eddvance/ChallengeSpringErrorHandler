@@ -1,6 +1,6 @@
-package io.eddvance.practice.challenge.controller_spring_boot_2.controller_spring_boot_2;
+package io.eddvance.practice.challenge.controller_spring_boot_2;
 
-import io.eddvance.practice.challenge.error_handler_exception.error_handler_exception.MyGlobalException;
+import io.eddvance.practice.challenge.error_handler_exception.MyGlobalException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
