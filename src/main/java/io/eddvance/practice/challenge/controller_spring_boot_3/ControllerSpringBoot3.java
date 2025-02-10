@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@RequestMapping("/api/spring-boot-3")
 @RestController
+@RequestMapping("/api/spring-boot-3")
 public class ControllerSpringBoot3 {
 
     @GetMapping("/error-page-spring-boot-3")
