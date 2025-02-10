@@ -5,13 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.core.env.Environment;
 
 
-@SpringBootApplication(
-        scanBasePackages = {
-                "io.eddvance.practice.challenge",
-                "io.eddvance.practice.challenge.controller_spring_boot_2",
-                "io.eddvance.practice.challenge.controller_spring_boot_3;"
-        })
-
+@SpringBootApplication
 public class Run {
 
     public static void main(String[] args) {
