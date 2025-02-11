@@ -13,4 +13,9 @@ public class ControllerSpringBoot3 {
     public String errorPage() {
         throw new MyGlobalException("An error has occurred (with spring boot 3");
     }
+
+    @GetMapping("/valid")
+    public String ok() {
+        return "spring boot 3 valid";
+    }
 }

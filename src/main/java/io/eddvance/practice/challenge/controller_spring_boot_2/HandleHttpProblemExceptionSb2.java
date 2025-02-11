@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 @ControllerAdvice
 public class HandleHttpProblemExceptionSb2 {
     @ExceptionHandler(MyGlobalException.class)
-    public ResponseEntity<GenMessageErrorSpringBoot2> handleCustomException(MatchException my) {
+    public ResponseEntity<GenMessageErrorSpringBoot2> handleCustomException(MyGlobalException my) {
         GenMessageErrorSpringBoot2 errorResponse = new GenMessageErrorSpringBoot2(
-                400,
+                HttpStatus.BAD_REQUEST.value(),
                 my.getMessage(),
                 "Plus de détails si nécessaire"
         );
