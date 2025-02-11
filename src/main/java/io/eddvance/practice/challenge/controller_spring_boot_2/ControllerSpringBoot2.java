@@ -24,8 +24,8 @@ public class ControllerSpringBoot2 {
         throw new MyGlobalException("An error has occurred (with spring boot 2");
     }
 
-    @Operation(summary = "No error Endpoint", description = "succes message")
-    @ApiResponse(responseCode = "200", description = "Response valid")
+    @Operation(summary = "No error endpoint", description = "succes message")
+    @ApiResponse(responseCode = "200", description = "Valid Response")
     @GetMapping("/valid")
     public String ok() {
         return "Spring boot 2 valid";
