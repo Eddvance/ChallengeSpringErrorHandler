@@ -1,43 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Book Create</title>
-  <link rel="stylesheet" th:href="@{/css/create-style.css}" />
+    <meta charset="UTF-8">
+    <title>Book Create</title>
+    <link rel="stylesheet" th:href="@{/css/create-style.css}"/>
 </head>
 <body>
 <div class="container">
-  <h2>Add a Book</h2>
-  <form method="POST" th:action="@{/create}" th:object="${bookForm}">
-    <p>
-      Book Name<br/>
-      <input th:field="*{bookName}" type="text" placeholder="Enter book name"/>
-    </p>
-    <div th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}" class="error"></div>
+    <h2>Add a Book</h2>
+    <form method="POST" th:action="@{/create}" th:object="${bookForm}">
+        <p>
+            Book Name<br/>
+            <input th:field="*{bookName}" type="text" placeholder="Enter book name"/>
+        </p>
+        <div th:if="${#fields.hasErrors('bookName')}" th:errors="*{bookName}" class="error"></div>
 
-    <p>
-      Publication Year<br/>
-      <input th:field="*{bookPublicationYear}" type="text" placeholder="Enter year of publication"/>
-    </p>
-    <div th:if="${#fields.hasErrors('bookPublicationYear')}" th:errors="*{bookPublicationYear}" class="error"></div>
+        <p>
+            Publication Year<br/>
+            <input th:field="*{bookPublicationYear}" type="text" placeholder="Enter year of publication"/>
+        </p>
+        <div th:if="${#fields.hasErrors('bookPublicationYear')}" th:errors="*{bookPublicationYear}" class="error"></div>
 
-    <p>
-      Book Author<br/>
-      <input th:field="*{bookAuthor}" type="text" placeholder="Enter book author"/>
-    </p>
-    <div th:if="${#fields.hasErrors('bookAuthor')}" th:errors="*{bookAuthor}" class="error"></div>
+        <p>
+            Book Author<br/>
+            <input th:field="*{bookAuthor}" type="text" placeholder="Enter book author"/>
+        </p>
+        <div th:if="${#fields.hasErrors('bookAuthor')}" th:errors="*{bookAuthor}" class="error"></div>
 
-    <p>
-      Description<br/>
-      <textarea th:field="*{bookDescription}" placeholder="Enter book description"></textarea>
-    </p>
-    <div th:if="${#fields.hasErrors('bookDescription')}" th:errors="*{bookDescription}" class="error"></div>
+        <p>
+            Description<br/>
+            <textarea th:field="*{bookDescription}" placeholder="Enter book description"></textarea>
+        </p>
+        <div th:if="${#fields.hasErrors('bookDescription')}" th:errors="*{bookDescription}" class="error"></div>
 
 
-
-    <input type="submit" value="Add Book" class="button"/>
-    <a th:href="@{/home}" class="button">cancel & home</a>
-  </form>
+        <input type="submit" value="Add Book" class="button"/>
+        <a th:href="@{/home}" class="button">cancel & home</a>
+    </form>
 </div>
 </body>
 </html>
