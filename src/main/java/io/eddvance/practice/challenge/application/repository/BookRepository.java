@@ -12,11 +12,11 @@ import java.util.logging.Logger;
 @Repository
 public class BookRepository implements CrudRepository<Book, Long> {
 
-private Logger logger = Logger.getLogger(BookRepository.class.getName());
-private static List<Book> books = new ArrayList<>();
+    private Logger logger = Logger.getLogger(BookRepository.class.getName());
+    private static List<Book> books = new ArrayList<>();
 
     @Override
-    public  Book save(Book book) {
+    public Book save(Book book) {
         books.add(book);
         logger.info("Book saved: " + book);
         return book;
