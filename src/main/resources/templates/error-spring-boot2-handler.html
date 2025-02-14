@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring boot 2 handler</title>
+</head>
+<body>
+<h1>Spring boot 2 handler</h1>
+
+<button onclick="fetchError('error400')">Erreur 400</button>
+<button onclick="fetchError('error401')">Erreur 401</button>
+<button onclick="fetchError('error403')">Erreur 403</button>
+<button onclick="fetchError('error404')">Erreur 404</button>
+<button onclick="fetchError('error409')">Erreur 409</button>
+<button onclick="fetchError('error422')">Erreur 422</button>
+<button onclick="fetchError('error500')">Erreur 500</button>
+<button onclick="fetchError('error503')">Erreur 503</button>
+
+<hr>
+<pre id="result"></pre>
+
+<script>
+    function fetchError(endpoint) {
+        const url = '' + endpoint;
+
+        fetch(url)
+            .then(response => {
+                return response.text().then(text => {
+                    const resultArea = document.getElementById('result');
+                    const output = `Statut HTTP : ${response.status}\n\n${text}`;
+                    resultArea.textContent = output;
+                });
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    }
+</script>

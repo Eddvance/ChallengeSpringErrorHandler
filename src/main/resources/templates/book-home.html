@@ -7,14 +7,16 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to the medical book database</h1>
-    <p>Click on "Show Books" to load the list.</p>
+    <h1>Welcome to the medical book database and error handler pour Spring boot 2 and 3</h1>
+
 
     <div class="buttons">
         <a th:href="@{/home}" class="button">Home</a>
         <button id="showBooksButton" class="button">Show Books</button>
         <button id="deleteSelectedButton" class="button">Delete Selected</button>
         <a th:href="@{/book-create}" class="button">Add a New Book</a>
+        <button id="showBooksButton" class="button">Show Books</button>
+
     </div>
 
     <div id="bookListContainer"></div>
