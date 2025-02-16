@@ -7,8 +7,6 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
-
 @Service
 public class BookService implements BookServiceInterface {
 
@@ -29,8 +27,8 @@ public class BookService implements BookServiceInterface {
     }
 
     @Override
-    public Book getBookByNumber(Long number) {
-        return bookRepositoryInterface.findById(number).orElseThrow(() -> new BookNotFoundException("Book not found with id " + id));
+    public Book getBookByNumber(Long id) {
+        return bookRepositoryInterface.findById(id).orElseThrow(() -> new BookNotFoundException("Book not found with id " + id));
     }
 
     @Override

@@ -1,5 +1,6 @@
 package io.eddvance.practice.challenge.application.controller.api;
 
+import io.eddvance.practice.challenge.application.exception.BookNotFoundException;
 import io.eddvance.practice.challenge.application.model.entity.Book;
 import io.eddvance.practice.challenge.application.service.BookServiceInterface;
 import org.springframework.http.ResponseEntity;

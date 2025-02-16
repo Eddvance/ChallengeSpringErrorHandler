@@ -8,7 +8,7 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "BOOK_NUMBER", columnDefinition = "BIGINT")
-    private Long bookNumber;
+    private Long id;
 
     @Column(name = "BOOK_NAME")
     private String bookName;
@@ -26,7 +26,7 @@ public class Book {
     }
 
     public Book(Long bookNumber, String bookName, Long bookPublicationYear, String bookDescription, String bookAuthor) {
-        this.bookNumber = bookNumber;
+        this.id = bookNumber;
         this.bookName = bookName;
         this.bookPublicationYear = bookPublicationYear;
         this.bookDescription = bookDescription;
@@ -54,11 +54,11 @@ public class Book {
     }
 
     public Long getBookNumber() {
-        return bookNumber;
+        return id;
     }
 
     public void setBookNumber(Long bookNumber) {
-        this.bookNumber = bookNumber;
+        this.id = bookNumber;
     }
 
     public String getBookName() {

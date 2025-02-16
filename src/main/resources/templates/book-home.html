@@ -7,16 +7,16 @@
 </head>
 <body>
 <div class="container">
-    <h1>Welcome to the medical book database and error handler pour Spring boot 2 and 3</h1>
-
+    <h1>Welcome to the medical book database and error handler for Spring Boot 2 and 3</h1>
 
     <div class="buttons">
         <a th:href="@{/home}" class="button">Home</a>
         <button id="showBooksButton" class="button">Show Books</button>
         <button id="deleteSelectedButton" class="button">Delete Selected</button>
         <a th:href="@{/book-create}" class="button">Add a New Book</a>
-        <button id="showBooksButton" class="button">Show Books</button>
-
+        
+        <input type="text" id="bookIdInput" placeholder="Enter Book ID">
+        <button id="showSingleBookButton" class="button">Show Book</button>
     </div>
 
     <div id="bookListContainer"></div>
@@ -150,6 +150,45 @@
                     alert("Error deleting selected books.");
                 });
         }
+    });
+
+    document.getElementById("showSingleBookButton").addEventListener("click", function () {
+        const bookId = document.getElementById("bookIdInput").value.trim();
+        if (!bookId) {
+            alert("Please enter a valid Book ID.");
+            return;
+        }
+
+        fetch(`/book/api/book/${bookId}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Book not found or network error: " + response.statusText);
+                }
+                return response.json();
+            })
+            .then(book => {
+                const container = document.getElementById("bookListContainer");
+                container.innerHTML = "";
+
+                if (!book) {
+                    container.innerHTML = "<p>Book not found.</p>";
+                    return;
+                }
+
+                const bookDetails = `
+                    <h3>Book Details</h3>
+                    <p><strong>ID:</strong> ${book.bookNumber}</p>
+                    <p><strong>Name:</strong> ${book.bookName}</p>
+                    <p><strong>Publication Year:</strong> ${book.bookPublicationYear}</p>
+                    <p><strong>Author:</strong> ${book.bookAuthor}</p>
+                    <p><strong>Description:</strong> ${book.bookDescription}</p>
+                `;
+                container.innerHTML = bookDetails;
+            })
+            .catch(error => {
+                console.error("Error fetching book:", error);
+                document.getElementById("bookListContainer").innerHTML = "<p>Error loading book.</p>";
+            });
     });
 </script>
 </body>

@@ -16,13 +16,16 @@ h1 {
     margin-bottom: 20px;
 }
 
+/* Mise en page des boutons */
 .buttons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     margin-bottom: 20px;
 }
 
+/* Style des boutons */
 .button {
     background-color: #3399FF;
     color: #fff;
@@ -32,19 +35,65 @@ h1 {
     text-decoration: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 16px;
 }
 
 .button:hover {
     background-color: #66B2FF;
 }
 
+/* Champ de saisie pour entrer l'ID d'un livre */
+#bookIdInput {
+    padding: 10px;
+    border: 2px solid #3399FF;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Espacement pour l'input et le bouton */
+#bookIdInput, #showSingleBookButton {
+    margin-top: 10px;
+}
+
+/* Table des livres */
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 th, td {
     padding: 10px;
     border: 1px solid #ffffff;
+    text-align: center;
+}
+
+/* Style du header du tableau */
+th {
+    background-color: #3399FF;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Alternance des couleurs pour les lignes du tableau */
+tr:nth-child(even) {
+    background-color: #555;
+}
+
+tr:nth-child(odd) {
+    background-color: #666;
+}
+
+/* Effet au survol des lignes du tableau */
+tr:hover {
+    background-color: #777;
+    transition: background-color 0.3s ease;
 }
