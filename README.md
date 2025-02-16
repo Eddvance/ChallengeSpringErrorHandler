@@ -1,4 +1,4 @@
-Gestion des erreurs entre Spring boot 2 et Spring boot 3
+Gestion des erreurs entre Spring boot 2 et Spring boot 3 (Problem Detail)
 
 
 Spring boot 2 = reponse simple (texte), non precise, non standardisee et donc personnalisable ;  procedure verbeuse ; non respect de RFC7807.
@@ -6,7 +6,7 @@ Spring boot 2 = reponse simple (texte), non precise, non standardisee et donc pe
                                 "Not found"
                                 
 
-Spring boot 3 = reponse standardisee et normee RFC7807, precis et detaille ; non verbeux ; renvoie un JSON.
+Spring boot 3 (Problem Detail) = reponse standardisee et normee RFC7807, precis et detaille ; non verbeux ; renvoie un JSON.
   Exemple (contextuel) :  "timestamp": "2025-02-16T09:20:33.788+00:00",
                           "status": 404,
                           "error": "Not Found",
