@@ -76,14 +76,12 @@ th, td {
     text-align: center;
 }
 
-/* Style du header du tableau */
 th {
     background-color: #3399FF;
     color: #fff;
     font-weight: bold;
 }
 
-/* Alternance des couleurs pour les lignes du tableau */
 tr:nth-child(even) {
     background-color: #555;
 }
@@ -92,7 +90,6 @@ tr:nth-child(odd) {
     background-color: #666;
 }
 
-/* Effet au survol des lignes du tableau */
 tr:hover {
     background-color: #777;
     transition: background-color 0.3s ease;
